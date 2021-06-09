@@ -34,8 +34,8 @@ public class PersonalActivity extends AppCompatActivity implements ValueEventLis
 
     GoogleSignInClient mGoogleSignInClient;
 
-    LinearLayout ln;
-    EditText tv_place;
+    LinearLayout ll;
+    EditText et_place;
     EditText tv_first_koord;
     EditText tv_sec_koord;
     TextView name, mail, tv_message;
@@ -52,9 +52,9 @@ public class PersonalActivity extends AppCompatActivity implements ValueEventLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_personal2);
 
-        ln = (LinearLayout) findViewById(R.id.profile_lin);
+        ll = (LinearLayout) findViewById(R.id.profile_lin);
 
         listView =(ListView) findViewById(R.id.listview);
 
@@ -62,7 +62,7 @@ public class PersonalActivity extends AppCompatActivity implements ValueEventLis
         mail = findViewById(R.id.mail);
         tv_message = findViewById(R.id.message);
         ava = findViewById(R.id.avatar);
-        tv_place = findViewById(R.id.place);
+        et_place = findViewById(R.id.place);
         tv_first_koord = findViewById(R.id.first_koord);
         tv_sec_koord = findViewById(R.id.sec_koord);
 
@@ -116,7 +116,7 @@ public class PersonalActivity extends AppCompatActivity implements ValueEventLis
     }
 
     public void onSend(View v) {
-        String place = tv_place.getText().toString();
+        String place = et_place.getText().toString();
         String first_location = tv_first_koord.getText().toString();
         String second_location = tv_sec_koord.getText().toString();
 
@@ -162,7 +162,7 @@ public class PersonalActivity extends AppCompatActivity implements ValueEventLis
 
         mGoogleSignInClient.signOut();
 
-        Intent intent = new Intent(ProfileActivity.this,MainActivity.class);
+        Intent intent = new Intent(PersonalActivity.this,MainActivity.class);
         startActivity(intent);
     }
 }

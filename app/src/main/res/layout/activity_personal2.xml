@@ -71,7 +71,9 @@
         android:onClick="onSend"
         android:layout_marginLeft="15sp"
         android:layout_marginRight="15sp"
-        android:layout_marginBottom="3sp"/>
+        android:layout_marginBottom="3sp"
+        android:backgroundTint="@color/white"
+        android:textColor="#hhh"/>
 
     <Button
         android:id="@+id/logout"
@@ -81,7 +83,9 @@
         android:onClick="onGoogleSignOut"
         android:layout_marginLeft="15sp"
         android:layout_marginRight="15sp"
-        android:layout_marginBottom="3sp"/>
+        android:layout_marginBottom="3sp"
+        android:backgroundTint="@color/white"
+        android:textColor="#hhh"/>
 
     <ListView
         android:layout_width="match_parent"
